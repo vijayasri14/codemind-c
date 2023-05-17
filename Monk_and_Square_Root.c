@@ -1,27 +1,26 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int n,j;
+    int n,i;
     scanf("%d",&n);
-    for(j=1;j<=n;j++)
+    for(i=1;i<=n;i++)
     {
-    long long int a,b,i,c=0;
-    scanf("%lld %lld",&a,&b);
-    for(i=0;i<b;i++)
-    {
-        if ((i*i)%b==a)
+        long long int a,b,j,x=0;
+        scanf("%lld%lld",&a,&b);
+        for(j=0;j<=b;j++)
         {
-            printf("%lld
-",i);
-            c=1;
-            break;
+            if ((j*j)%b==a)
+            {
+                printf("%lld
+",j);
+                x=1;
+                break;
+            }
+        }
+        if(x==0)
+        {
+            printf("-1
+");
         }
     }
-    if(c==0)
-    {
-        printf("-1
-");
-    }
-}
 }
